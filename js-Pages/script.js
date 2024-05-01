@@ -1,11 +1,18 @@
 // Global variable to store the API key
 let globalApiKey = '';
 
+let keyFormat = /^([a-z]{2})+-([a-zA-Z0-9.-]+)$/i;
+
 // JavaScript function to store API key in a global variable
 function storeAPIKey() {
     // Get the value entered in the input field
     var apiKey = document.getElementById('api-key-input').value;
-
+    if(apiKey === "" || keyFormat.test(apiKey) == false){
+        alert("Please Enter a valid API Key");
+        return;
+    }else{
+        alert("API Key is stored successfully");
+    }
     // Store the API key in the global variable
     globalApiKey = apiKey;
 
@@ -28,8 +35,14 @@ function displayText() {
         return;
     }
 
+    if(text == ""){
+        alert("Please enter your message");
+        return
+    }
+
     // Send the captured text to the OpenAI API
     sendRequest(text);
+
 }
 
 // Function to send request to the OpenAI API
