@@ -22,6 +22,13 @@ function displayText() {
     // Get the text from the textarea
     var text = document.getElementById('input-text').value;
 
+    // Check if the text is empty
+    if (text.trim() === '') {
+        // If text is empty, display a popup message
+        alert("Please try again and enter some text.");
+        return;
+    }
+
     // Check if API Key is stored
     if (!globalApiKey) {
         alert("API Key is missing. Please store the API Key first.");
