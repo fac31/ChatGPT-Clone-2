@@ -38,8 +38,8 @@ h1 {
 }
 
 input[type="password"]{
-  width: 88%;
-  padding: 8px;
+  width: 90%;
+  padding: 10px 14px;
   margin: 10px auto;
 }
 
@@ -52,6 +52,8 @@ input[type="password"]{
   border: 1px solid black;
   border-radius: 6px;
   margin: auto;
+  padding: 14px;
+  font-size: 15pt;
 }
 
 h2 {
@@ -75,6 +77,8 @@ textarea {
   height: 80px;
   border: 1px solid black;
   border-radius: 6px;
+  padding: 14px;
+  font-size: 14pt;
 }
 
  /* 
