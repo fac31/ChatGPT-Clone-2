@@ -21,20 +21,22 @@
 // }
 
 // document.getElementById('sendBtn').addEventListener('click', displayText);
+
+
 async function displayText() {
     const text = document.getElementById('input-text').value;
-
     try {
         const response = await fetch('http://localhost:3000/send-request', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ text })
+            body: JSON.stringify({ text })  
         });
-
+        document.getElementById('input-text').value = "";
         const data = await response.json();
         document.getElementById('display-area').textContent = data.generatedText;
+        success();
     } catch (error) {
         console.error('There was a problem sending the request:', error);
         // Handle error
@@ -42,3 +44,12 @@ async function displayText() {
 }
 
 document.getElementById('sendBtn').addEventListener('click', displayText);
+
+
+function success() {
+    if(document.getElementById('input-text').value === "") { 
+           document.getElementById('sendBtn').disabled = true; 
+       } else { 
+           document.getElementById('sendBtn').disabled = false;
+       }
+   }

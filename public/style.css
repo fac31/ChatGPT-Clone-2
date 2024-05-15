@@ -1,33 +1,28 @@
- /* Some basic styling for demonstration purposes */
+/* Some basic styling for demonstration purposes */
 
- #container {
+#container {
   display: flex;
   width: 70%;
   margin: auto;
   flex-direction: column;
-  justify-content: space-between; /* Distributes space between items */
-  height: 100vh; /* Full viewport height */
+  height: 75svh; /* Full viewport height */
   padding-bottom: 10px; /* Optional: Adds some space at the bottom */
 }
 
-  /* --------------- */
-  /* HEADER */
-/* --------------- */
-
-
+/* HEADER */
 .header-style {
   display: flex; /* Use flexbox for layout */
   justify-content: center; /* Center flex items on the main axis (horizontally) */
   align-items: center; /* Center flex items on the cross axis (vertically) */
-  margin: 30px auto 50px  auto;
+  margin: 40px auto;
 }
 
 h1 {
   margin: 0; /* Remove default margin to align properly with the image */
-  font-size: 2em; /* Adjust based on your design needs */
+  font-size: 2.6em; /* Adjust based on your design needs */
   white-space: nowrap; /* Prevents the text from wrapping */
-  font-family: sans-serif;
-  color: #74AA9C;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #4b6e65;
 }
 
 .img-style {
@@ -37,88 +32,58 @@ h1 {
   margin-left: 5px; /* Add some space between the h1 and the image */
 }
 
-input[type="password"]{
-  width: 90%;
-  padding: 10px 14px;
-  margin: 10px auto;
-}
-
 #display-area {
   flex-grow: 1; /* Allows the display area to grow and fill available space */
   overflow-y: auto; /* Adds scroll if content exceeds available space */
-  margin-bottom: 10px; /* Separation space between display area and input text */
-  width: 90%;
-  background: #89cbb7; /* Optional: Background color for visual separation */
+  width: 80%;
+  background: #9bd2ca; /* Optional: Background color for visual separation */
   border: 1px solid black;
   border-radius: 6px;
-  margin: auto;
+  margin: 10px auto;
   padding: 14px;
   font-size: 15pt;
-}
-
-h2 {
-  font-family: sans-serif;
-  color: #0a2f25;
-  margin: 40px 0 5px 40px;
 }
 
 .input-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  margin: 30px auto;
+  width: 82%;
+  margin: 10px auto;
 }
 
 textarea {
   flex-grow: 2;
   resize: none;
   margin-right: 20px;
-  height: 80px;
+  height: 50px;
   border: 1px solid black;
   border-radius: 6px;
-  padding: 14px;
+  padding: 12px;
   font-size: 14pt;
 }
 
- /* 
-#input-text {
-    width: calc(100% - 50px); /* Take up the full width minus the button width */
-    /*margin-right: 10px; /* Add some space between the textarea and the button */
-  /*}
-
-
-
-  .hidden {
-    display: none;
-  }
-
-
-/* Chatbot section */
-button img{
-  width: 24px;
-  height: 24px;
-}
-
-#submitBtn{
-  margin-left: 40px;;
+button img {
+  width: 25px;
+  height: 25px;
 }
 
 button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #24ad82;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
   border-radius: 6px;
   border: none;
   align-items: center;
-  width: 120px;
-  height: 34px;
+  width: 140px;
+  height: 46px;
 }
 
-button:hover {
-  background-color: #74AA9C;
+button:disabled,
+button[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+  opacity: 0.6;
+  cursor: not-allowed;
 }
-
-
-
-
-
