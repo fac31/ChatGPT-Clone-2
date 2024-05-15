@@ -1,4 +1,8 @@
-/* Some basic styling for demonstration purposes */
+* {
+  font-size: 13pt;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 #container {
   display: flex;
@@ -21,7 +25,7 @@ h1 {
   margin: 0; /* Remove default margin to align properly with the image */
   font-size: 2.6em; /* Adjust based on your design needs */
   white-space: nowrap; /* Prevents the text from wrapping */
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   color: #4b6e65;
 }
 
@@ -29,19 +33,19 @@ h1 {
   height: auto; /* Maintain aspect ratio */
   width: auto; /* Allow width to adjust based on height */
   max-height: 2em; /* Match the h1 font size to align their heights */
-  margin-left: 5px; /* Add some space between the h1 and the image */
 }
 
 #display-area {
   flex-grow: 1; /* Allows the display area to grow and fill available space */
   overflow-y: auto; /* Adds scroll if content exceeds available space */
   width: 80%;
-  background: #9bd2ca; /* Optional: Background color for visual separation */
-  border: 1px solid black;
-  border-radius: 6px;
+  background: #a0cbc6; /* Optional: Background color for visual separation */
+  border: 1px solid rgb(86, 86, 86);
+  border-radius: 20px;
   margin: 10px auto;
   padding: 14px;
-  font-size: 15pt;
+  line-height: 1.5;
+  font-weight: 500;
 }
 
 .input-text {
@@ -54,13 +58,12 @@ h1 {
 
 textarea {
   flex-grow: 2;
-  resize: none;
-  margin-right: 20px;
-  height: 50px;
-  border: 1px solid black;
-  border-radius: 6px;
-  padding: 12px;
-  font-size: 14pt;
+  resize: none; /* Prevent the user from resizing manually */
+  overflow: hidden; /* Hide any overflowing content */
+  margin-right: 16px;
+  border: 1px solid rgb(102, 102, 102);
+  border-radius: 18px;
+  padding: 8px 12px;
 }
 
 button img {
@@ -81,7 +84,7 @@ button {
 }
 
 button:disabled,
-button[disabled]{
+button[disabled] {
   background-color: #cccccc;
   color: #666666;
   opacity: 0.6;
