@@ -1,37 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Data Display</title>
-  <link rel="stylesheet" href="/style.css">
-  <script src="/client.js" async></script>
-</head>
-<body>
-<header>
-  <div class="header-style">
-    <h1>Our ChatGPT Clone</h1>
-    <img src="images/logo-black.png" class="img-style">  
-  </div>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatGPT Clone</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/client.js" async></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-style">
+        <img src="images/logo-black.png" class="img-style" />
+        <h1>ChatGPT Clone</h1>
+        <img src="images/logo-black.png" class="img-style" />
+      </div>
+    </header>
 
-
-<div id="container">
-  
-  <h2 class="h2-style">Text Area</h2>
-  <div id="display-area"></div>
-
-  <div class="input-text">
-    <textarea id="input-text" placeholder="Enter your text here..."></textarea>
-
-    <button id="sendBtn" onclick="displayText()">
-      <img src="../images/arrow-up-solid.svg">
-    </button>
-    
-  </div>
-
-</div>
-
-
-</body>
+    <div id="container">
+      <div id="display-area"></div>
+      <div class="input-text">
+        <textarea id="input-text" onkeyup="isTextBoxEmpty()" oninput="autoExpand(this)" placeholder="Enter your message here..."></textarea>
+        <button disabled id="sendBtn" onclick="displayText()" >Send</button>
+      </div>
+    </div>
+  </body>
 </html>
